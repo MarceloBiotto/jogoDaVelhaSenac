@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const playerOneScore = document.getElementById('player-one-score');
     const playerTwoScore = document.getElementById('player-two-score');
     const botaoSair = document.getElementById('exit-game');
-    const player1Win = document.getElementById('player-x-win"');
-    const informacoes = document.getElementById('nfo');
 
     let currentPlayer = 'X';
     let gameActive = true;
@@ -87,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // Atualiza o placar de acordo com o vencedor
       if (winner === 'Player 1') {
         playerOneWins++;
-        player1Win.innerHTML = informacoes;
         console.log("player 1 venceu")
       } else if (winner === 'Player 2' && !isPlayerVsCpu) {
         playerTwoWins++;
