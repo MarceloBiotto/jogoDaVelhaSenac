@@ -36,9 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (const pattern of winPatterns) {
       const [a, b, c] = pattern;
+
       if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[a].textContent === cells[c].textContent) {
         // Se houver um vencedor, encerra o jogo
         endGame(cells[a].textContent === 'X' ? 'Player 1' : 'Player 2');
+        
         return;
       }
     }

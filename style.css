@@ -106,3 +106,22 @@ h2, span.x, div#score, span.o {
 #reset-game:hover {
     background: #2c3e52;
 }
+/* 
+@media (min-width: 320px) and (max-width: 400px) {
+    
+    #game{
+       width: 600px;
+        height: 600px;
+        
+      }
+
+      #game > li {
+
+        width: 150px;
+        height: 150px;
+      }
+
+
+
+ verificar não funcionando corretamente
+} */
