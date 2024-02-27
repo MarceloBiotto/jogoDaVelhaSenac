@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
       playerOneScore.textContent = playerOneWins;
       playerTwoScore.textContent = playerTwoWins;
     }
-
+//aqui tem que ajustar********************************************************************************************
     function endGame(winner) {
       gameActive = false;
       gameMessages.querySelector('.player-x-win').style.display = 'none';
