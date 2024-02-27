@@ -1,17 +1,20 @@
 body {
     margin-top: 40px;
     background: #192233;
-        color: #fff;
-        font-family: Helvetica;
+    color: #030303;
+    font-family: Helvetica;
     font-weight: bold;
-    text-align:center;
+    text-align: center;
 }
 
 h1 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #04D361
-    
+    color: #04D361;
+}
+h2, span.x, div#score, span.o {
+    color: #ffffff;
+
 }
 .container {
     margin: 0 auto;
@@ -31,10 +34,10 @@ h1 {
     list-style: none;
     float: left;
     overflow: hidden;
-    text-decoration:none;
+    text-decoration: none;
     width: 100px;
     height: 100px;
-    background: #f1f1f1;
+    background: #ffffff;
     border: 1px solid #ccc;
     border-right: 1px solid #fff;
     cursor: pointer;
@@ -43,16 +46,17 @@ h1 {
     padding-top: 20px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-size: 60px;
 }
 
 #game > li.x {
-    font-size: 40px;
-    color: #ed4e6e
+    font-size: 60px;
+    color: #000; /* Cor preta para X */
 }
 
 #game > li.o {
-    font-size: 40px;
-    color: #485b6e;
+    font-size: 60px;
+    color: #000; /* Cor preta para O */
 }
 
 #game > li:hover {
@@ -66,7 +70,7 @@ h1 {
 }
 
 #nfo {
-    text-align:center;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -76,8 +80,8 @@ h1 {
 }
 
 #whos-turn.x span.x,
-#whos-turn.o span.o, 
-#game-messages.player-x-win > span.player-x-win, 
+#whos-turn.o span.o,
+#game-messages.player-x-win > span.player-x-win,
 #game-messages.player-o-win > span.player-o-win,
 #game-messages.draw > span.draw {
     display: block;
@@ -86,19 +90,19 @@ h1 {
 
 #reset-game {
     text-align: center;
-        border: none;
-        padding: 0.6em 1.2em;
-        background: #7890FB;
-        color: #fff;
-        font-size: 1em;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: inline-block;
-        margin: 3px 2px;
-        border-radius: 2px;
+    border: none;
+    padding: 0.6em 1.2em;
+    background: #7890FB;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 2px;
+    border-radius: 2px;
 }
 
 #reset-game:hover {
-        background: #2c3e52;
+    background: #2c3e52;
 }
