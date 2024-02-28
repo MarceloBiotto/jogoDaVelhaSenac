@@ -2,7 +2,7 @@ body {
     margin-top: 40px;
     background: #192233;
     color: #030303;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
 }
@@ -12,10 +12,11 @@ h1 {
     letter-spacing: 0.1em;
     color: #04D361;
 }
+
 h2, span.x, div#score, span.o {
     color: #ffffff;
-
 }
+
 .container {
     margin: 0 auto;
     width: 400px;
@@ -44,19 +45,13 @@ h2, span.x, div#score, span.o {
     text-transform: uppercase;
     text-align: center;
     padding-top: 20px;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 60px;
 }
 
-#game > li.x {
+#game > li.x, #game > li.o {
     font-size: 60px;
-    color: #000; /* Cor preta para X */
-}
-
-#game > li.o {
-    font-size: 60px;
-    color: #000; /* Cor preta para O */
+    color: #000;
 }
 
 #game > li:hover {
@@ -74,13 +69,11 @@ h2, span.x, div#score, span.o {
     margin-top: 10px;
 }
 
-#whos-turn > span,
-#game-messages > span {
+#whos-turn > span, #game-messages > span {
     display: none;
 }
 
-#whos-turn.x span.x,
-#whos-turn.o span.o,
+#whos-turn.x span.x, #whos-turn.o span.o,
 #game-messages.player-x-win > span.player-x-win,
 #game-messages.player-o-win > span.player-o-win,
 #game-messages.draw > span.draw {
@@ -106,22 +99,3 @@ h2, span.x, div#score, span.o {
 #reset-game:hover {
     background: #2c3e52;
 }
-/* 
-@media (min-width: 320px) and (max-width: 400px) {
-    
-    #game{
-       width: 600px;
-        height: 600px;
-        
-      }
-
-      #game > li {
-
-        width: 150px;
-        height: 150px;
-      }
-
-
-
- verificar não funcionando corretamente
-} */
