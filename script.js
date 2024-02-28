@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const playerOneScore = document.getElementById('player-one-score');
   const playerTwoScore = document.getElementById('player-two-score');
   const botaoSair = document.getElementById('exit-game');
+  // const player1Venceu = document.getElementsById('player-x-win');
 
   let currentPlayer = 'X';
   let gameActive = true;
@@ -76,20 +77,24 @@ document.addEventListener('DOMContentLoaded', function () {
   function endGame(winner) {
       gameActive = false;
 
-      gameMessages.querySelectorAll('.player-x-win, .player-o-win, .draw').forEach(message => {
-          message.style.display = 'none';
-      });
+      // gameMessages.querySelectorAll('.player-x-win, .player-o-win, .draw').forEach(message => {
+      //     message.style.display = 'none';
+      // });
 
-      const winnerMessage = gameMessages.querySelector(`.${winner.toLowerCase().replace(' ', '-')}-win`);
-      if (winnerMessage) {
-          winnerMessage.style.display = 'block';
-      }
+      // const winnerMessage = gameMessages.querySelector(`.${winner.toLowerCase().replace(' ', '-')}-win`);
+      // if (winnerMessage) {
+      //     winnerMessage.style.display = 'block';
+      // }
 
       if (winner === 'Player 1') {
           playerOneWins++;
+          gameMessages.innerHTML = 'Player1 Venceu!'
+          
           console.log("Player 1 venceu");
       } else if (winner === 'Player 2' || (winner === 'Draw' && isPlayerVsCpu)) {
           playerTwoWins++;
+          gameMessages.innerHTML = 'Player2 Venceu!'
+          
           console.log("Player 2 venceu");
       }
 
@@ -98,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       setTimeout(() => {
           resetGame();
+          gameMessages.innerHTML = '';
       }, 2000);
   }
 
@@ -138,21 +144,21 @@ document.addEventListener('DOMContentLoaded', function () {
       isPlayerVsCpu = false;
       isCpuVsCpu = false;
       resetGame();
-      gameMessages.style.display = 'none';
+      gameMessages.innerHTML = '';
   });
 
   playerVsCpuButton.addEventListener('click', function () {
       isPlayerVsCpu = true;
       isCpuVsCpu = false;
       resetGame();
-      gameMessages.style.display = 'none';
+      gameMessages.innerHTML = '';
   });
 
   cpuVsCpuButton.addEventListener('click', function () {
       isPlayerVsCpu = false;
       isCpuVsCpu = true;
       resetGame();
-      gameMessages.style.display = 'none';
+      gameMessages.innerHTML = '';
 
       function playCpuVsCpu() {
           if (isCpuVsCpu && gameActive) {
