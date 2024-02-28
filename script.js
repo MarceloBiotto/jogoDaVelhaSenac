@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
           gameMessages.innerHTML = 'Player1 Venceu!'
           
           console.log("Player 1 venceu");
-      } else if (winner === 'Player 2' || (winner === 'Draw' && isPlayerVsCpu)) {
-          playerTwoWins++;
+      } else if (winner === 'Player 2' || (winner === 'Draw' && isPlayerVsCpu)) { // tirar daqui o draw
+          playerTwoWins++; 
           gameMessages.innerHTML = 'Player2 Venceu!'
           
           console.log("Player 2 venceu");
