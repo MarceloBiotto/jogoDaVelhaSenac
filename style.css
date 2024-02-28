@@ -99,3 +99,9 @@ h2, span.x, div#score, span.o {
 #reset-game:hover {
     background: #2c3e52;
 }
+
+#game > li.winner-cell {
+    background-color: #4CAF50; /* Cor para realçar os quadrados vencedores */
+    transition: background-color 2s ease; /* Tempo de transição */
+  }
+  

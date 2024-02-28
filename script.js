@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  
   const gameBoard = document.getElementById('game');
   const cells = document.querySelectorAll('#game li');
   const resetButton = document.getElementById('reset-game');
@@ -32,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (const pattern of winPatterns) {
       const [a, b, c] = pattern;
+
       if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[a].textContent === cells[c].textContent) {
+        // Se houver um vencedor, encerra o jogo
         endGame(cells[a].textContent === 'X' ? 'Player 1' : 'Player 2');
         return;
       }
@@ -58,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetGame() {
     cells.forEach(cell => {
       cell.textContent = '';
+      cell.style.background = ''; // Limpar as cores de fundo
     });
     currentPlayer = 'X';
     gameActive = true;
@@ -91,7 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateScore();
 
-    setTimeout(resetGame, 2000);
+    // Atraso antes de resetar o jogo e remover a cor de fundo
+    setTimeout(() => {
+      resetGame();
+    }, 2000);
   }
 
   cells.forEach(cell => {
@@ -99,6 +106,24 @@ document.addEventListener('DOMContentLoaded', function () {
       if (gameActive && !this.textContent) {
         this.textContent = currentPlayer;
         checkWinner();
+
+        // Adiciona cor de fundo às células vencedoras
+        const winPatterns = [
+          [0, 1, 2], [3, 4, 5], [6, 7, 8], // Linhas
+          [0, 3, 6], [1, 4, 7], [2, 5, 8], // Colunas
+          [0, 4, 8], [2, 4, 6]             // Diagonais
+        ];
+
+        for (const pattern of winPatterns) {
+          const [a, b, c] = pattern;
+          if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[a].textContent === cells[c].textContent) {
+            // Se a célula estiver na combinação vencedora, adiciona a cor de fundo
+            cells[a].style.background = '#32CD32';
+            cells[b].style.background = '#32CD32';
+            cells[c].style.background = '#32CD32';
+          }
+        }
+
         switchPlayer();
         if (isPlayerVsCpu && gameActive) {
           setTimeout(makeCpuMove, 500);
