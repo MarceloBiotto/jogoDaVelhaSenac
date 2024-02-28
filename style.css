@@ -79,6 +79,8 @@ h2, span.x, div#score, span.o {
 #game-messages.draw > span.draw {
     display: block;
     margin-top: 10px;
+    color: white;
+    font-size: 32px;
 }
 
 #reset-game {
