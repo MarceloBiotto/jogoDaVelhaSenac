@@ -86,6 +86,11 @@ h2, span.x, div#score, span.o {
     display: none;
 }
 
+#whos-turn.x span.x,
+#whos-turn.o span.o {
+    display: block;
+    margin-top: 10px;
+}
 
 #reset-game {
     text-align: center;
