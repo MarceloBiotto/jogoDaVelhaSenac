@@ -18,10 +18,12 @@ A ideia era criar um jodo da velha onde era possível jogar contra outro jogador
 
 > * Na tela incial escolha qual modo de jogo deseja: jogador vs jogador, jogador vs cpu e cpu vs cpu;
 > * O jogo inicia com o primeiro jogador assumindo o "X" e será finalizado quando houver um ganhador ou um empate;
+> * Uma vez havendo um ganhador a pontuação será atualizada com o vencedor;
+> * O padrão vencedor também ficará colorido na tela para fácil visualização;
 > * Responsividade para todas as telas e também para mobile!
 
 
-<h2 align="center"> Exemplos de uso </h2>
+<h2 align="center"> Exemplos de uso: </h2>
 
 
 <p align="center">Tela inicial com os modos de jogo</p>
