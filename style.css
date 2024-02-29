@@ -5,6 +5,7 @@ body {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
+    height: 100vh;
 }
 
 h1 {
@@ -85,15 +86,6 @@ h2, span.x, div#score, span.o {
     display: none;
 }
 
-/* #whos-turn.x span.x, #whos-turn.o span.o,
-#game-messages.player-x-win > span.player-x-win,
-#game-messages.player-o-win > span.player-o-win,
-#game-messages.draw > span.draw {
-    display: block;
-    margin-top: 10px;
-    color: white;
-    font-size: 32px;
-} */
 
 #reset-game {
     text-align: center;
@@ -115,7 +107,16 @@ h2, span.x, div#score, span.o {
 }
 
 #game > li.winner-cell {
-    background-color: #4CAF50; /* Cor para realçar os quadrados vencedores */
-    transition: background-color 2s ease; /* Tempo de transição */
+    background-color: #4CAF50; 
+    transition: background-color 2s ease; 
   }
   
+/* 
+  @media (min-width: 320px){
+    .container {
+        margin: 0 auto;
+        width: 800px;
+        height: 800px;
+    }
+
+  } */
