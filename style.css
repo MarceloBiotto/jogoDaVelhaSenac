@@ -16,7 +16,10 @@ h1 {
 h2, span.x, div#score, span.o {
     color: #ffffff;
 }
+#game-messages{
 
+    color: #ffffff;
+}
 .container {
     margin: 0 auto;
     width: 400px;
@@ -73,7 +76,7 @@ h2, span.x, div#score, span.o {
     display: none;
 }
 
-#whos-turn.x span.x, #whos-turn.o span.o,
+/* #whos-turn.x span.x, #whos-turn.o span.o,
 #game-messages.player-x-win > span.player-x-win,
 #game-messages.player-o-win > span.player-o-win,
 #game-messages.draw > span.draw {
@@ -81,7 +84,7 @@ h2, span.x, div#score, span.o {
     margin-top: 10px;
     color: white;
     font-size: 32px;
-}
+} */
 
 #reset-game {
     text-align: center;
