@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const playerOneScore = document.getElementById('player-one-score');
   const playerTwoScore = document.getElementById('player-two-score');
   const botaoSair = document.getElementById('exit-game');
-  // const player1Venceu = document.getElementsById('player-x-win');
+  
 
   let currentPlayer = 'X';
   let gameActive = true;
@@ -77,25 +77,20 @@ document.addEventListener('DOMContentLoaded', function () {
   function endGame(winner) {
       gameActive = false;
 
-      // gameMessages.querySelectorAll('.player-x-win, .player-o-win, .draw').forEach(message => {
-      //     message.style.display = 'none';
-      // });
-
-      // const winnerMessage = gameMessages.querySelector(`.${winner.toLowerCase().replace(' ', '-')}-win`);
-      // if (winnerMessage) {
-      //     winnerMessage.style.display = 'block';
-      // }
 
       if (winner === 'Player 1') {
           playerOneWins++;
-          gameMessages.innerHTML = 'Player1 Venceu!'
+          gameMessages.innerHTML = winner + ' venceu!'
           
           console.log("Player 1 venceu");
-      } else if (winner === 'Player 2' || (winner === 'Draw' && isPlayerVsCpu)) { // tirar daqui o draw
+      } else if (winner === 'Player 2') { 
           playerTwoWins++; 
-          gameMessages.innerHTML = 'Player2 Venceu!'
+          gameMessages.innerHTML =  winner + ' venceu!'
           
-          console.log("Player 2 venceu");
+          
+      }else{
+        gameMessages.innerHTML =  ' Empate!'
+          
       }
 
       updateScore();
