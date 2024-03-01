@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   botaoSair.addEventListener('click', function () {
-      console.log("Estou sendo clicado!")
+      
       window.location.href = "https://www.google.com.br";
   });
 });
