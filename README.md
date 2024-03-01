@@ -5,7 +5,7 @@
 A ideia era criar um jodo da velha onde era possível jogar contra outro jogador, contra a cpu e também colocar cpu vs cpu; </p> <br>
 
 
-
+Possivel acessar também pelo site : https://jogo-da-velha-senac.vercel.app/
 
 
 
